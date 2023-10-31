@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "f6ac60e3-c297-432a-a2be-4c9db504800e",
+		"name": "pruebaApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29693238"
+	},
+	"item": [
+		{
+			"name": "findAllLibros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/libros/findAllLibros"
+			},
+			"response": []
+		},
+		{
+			"name": "findLibroById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/libros/findLibroByTitulo/Libro1"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllAutores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/autores/findAllAutores"
+			},
+			"response": []
+		},
+		{
+			"name": "findAutorByNombre",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/autores/findAutorByNombre/Autor1"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllEditoriales",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/editoriales/findAllEditoriales"
+			},
+			"response": []
+		},
+		{
+			"name": "findEditorialByNombre",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/editoriales/findEditorialByNombre/Editorial1"
+			},
+			"response": []
+		},
+		{
+			"name": "saveEditorial",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alta\":true,\r\n    \"nombre\":\"Editorial8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/editoriales/saveEditorial"
+			},
+			"response": []
+		},
+		{
+			"name": "saveAutor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alta\": true,\r\n    \"nombre\": \"Autor9\"\r\n}  \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/autores/saveAutor"
+			},
+			"response": []
+		},
+		{
+			"name": "saveLibro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"isbn\": 666,\r\n        \"titulo\": \"libro6\",\r\n        \"anio\": 1998,\r\n        \"ejemplares\": 2,\r\n        \"ejemplaresPrestados\": 1,\r\n        \"ejemplaresRestantes\": 1,\r\n        \"alta\": true,\r\n        \"editorial\": {\r\n            \"id_editorial\": 8,\r\n            \"nombre\": \"Editorial8\",\r\n            \"alta\": true\r\n        },\r\n        \"autor\": {\r\n            \"id_autor\": 9,\r\n            \"nombre\": \"Autor9\",\r\n            \"alta\": true\r\n        }\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/libros/saveLibro"
+			},
+			"response": []
+		},
+		{
+			"name": "updateLibro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"isbn\": 2222,\r\n    \"titulo\": \"Libro Act\",\r\n    \"anio\": 2023,\r\n    \"ejemplares\": 4,\r\n    \"ejemplaresPrestados\": 2,\r\n    \"ejemplaresRestantes\": 2,\r\n    \"alta\": true,\r\n    \"editorial\": {\r\n        \"id_editorial\": 2,\r\n        \"nombre\": \"Editorial2\",\r\n        \"alta\": 1\r\n    },\r\n    \"autor\": {\r\n        \"id_autor\": 2,\r\n        \"nombre\": \"Autor2\",\r\n        \"alta\": 1\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/libros/updateLibro/2"
+			},
+			"response": []
+		},
+		{
+			"name": "updateAutor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_autor\":4,\r\n    \"alta\":true,\r\n    \"nombre\":\"Editorial4n\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/autores/updateAutor/4"
+			},
+			"response": []
+		},
+		{
+			"name": "updateEditorial",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_editorial\":4,\r\n    \"alta\":true,\r\n    \"nombre\":\"Editorial4n\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/editoriales/updateEditorial/4"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteLibro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/libros/deleteLibro/12"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAutor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/autores/deleteAutor/3"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEditorial",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/editoriales/deleteEditorial/3"
+			},
+			"response": []
+		}
+	]
+}
